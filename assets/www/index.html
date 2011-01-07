@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<!--
+ Drupal GeoPicture. A simple Drupal picture uploader for Android.
+ Copyright (C) 2011 Pierre Buyle
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Affero General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Affero General Public License for more details.
+
+ You should have received a copy of the GNU Affero General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+  <head>
+    <title>PhoneGap</title>
+    <link rel="stylesheet" href="jquery.mobile-1.0a2.min.css" />
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="jquery-1.4.4.min.js"></script>
+    <script src="jquery.mobile-1.0a2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap-0.9.3.js"></script>
+    <script type="text/javascript" charset="utf-8" src="drupal.js"></script>
+    <script type="text/javascript" charset="utf-8" src="index.js"></script> 
+  </head>
+  <body>   
+	  
+	<div data-role="page" data-theme="a" id="home">
+		<div data-role="header"><h1>GeoPicture</h1><a id="options-button" href="#options" data-icon="gear" class="ui-btn-right">Options</a></div>
+		<div data-role="content">
+      <div data-role="">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value=""/>
+      </div>
+      <div>
+        <label for="picture">Picture</label>
+			  <a href="#" id="get-picture" data-role="button" ><img id="picture"  src="images/entry_no_icon.png"/></a>
+      </div>
+      <div data-role="">
+        <label for="body">Description</label>
+        <textarea cols="40" rows="8" name="body" id="body"></textarea>
+      </div>
+			<div data-role="">
+			  <label for="location-summary">Location</label>
+			  <input type="text" name="location-summary" id="location-summary" value=""  />
+		  </div>
+       <a id="post" data-role="button" href="#">Post</a>
+		</div>
+	</div>
+	<div data-role="page" data-theme="a" id="options">
+    <div data-role="header"><h1>Options</h1></div>
+    <div data-role="content">
+    <div data-role="fieldcontain">
+	    <label for="name">Username</label>
+	    <input type="text" name="name" id="name" data-storage-key="username" value=""  />
+	    <label for="password">Password</label>
+	    <input type="password" name="password" id="password" data-storage-key="password" value="" />
+	    <a id="login" data-role="button">Login</a>
+      <a id="logout" data-role="button" style="display: none">Logout</a>
+    </div>	
+	</div>
+	</div>
+	<div data-role="page" data-theme="a" id="location">
+	  <div data-role="header"><h1>Location</h1></div>
+	  <div data-role="content">
+	   <div data-role="">
+        <a id="location-refresh" data-icon="refresh" data-role="button" class="ui-btn-right">Refresh current location</a>
+			  </div><div data-role="">
+			  <label for="street">Street</label>
+        <input type="text" name="street" id="street" value=""  />
+        </div><div data-role="">
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" value=""  />
+        </div><div data-role="">
+        <label for="province">Province</label>
+        <input type="text" name="province" id="province" value=""  />
+        </div><div data-role="">
+        <label for="postal_code">Postal code</label>
+        <input type="text" name="postal_code" id="postal_code" value=""  />
+        </div><div data-role="">
+        <label for="latitude">Latitude</label>
+        <input type="text" name="latitude" id="latitude" value=""  />
+        </div><div data-role="">
+        <label for="longitude">Longitude</label>
+        <input type="text" name="longitude" id="longitude" value=""  />
+      </div>
+	  </div>
+	</div>
+	<div data-role="dialog" data-theme="a" id="get-picture-from-device">
+	  <div data-role="header"><h1>Picture</h1></div>
+	  <div data-role="content">
+	    <div data-role="controlgroup">
+        <a data-picture-source="CAMERA" data-role="button" href="#">Take picture</a>
+        <a data-picture-source="PHOTOLIBRARY" data-role="button" href="#">Use picture from album</a>
+      </div>
+    </div>
+	</div>
+	<div data-role="dialog" data-theme="a" id="get-picture-from-file">
+	 <div data-role="header"><h1>Picture</h1></div>
+    <div data-role="content">
+      <input type="file" accept="image/gif, image/jpeg, image/png"  name="picture-file" id="picture-file"></input>
+	    <a href="#" data-role="button" data-icon="check">Ok</a>
+    </div>
+	</div>
+  <canvas id="picture-canvas"></canvas>
+</body>
+</html>
