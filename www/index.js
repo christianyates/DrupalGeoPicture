@@ -15,12 +15,23 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-$.extend(Drupal, {base_url: 'http://dev.nid-de-poule.be/'});
+
 $.extend($.mobile, {defaultTransition: 'none'});
+
 $(document).ready(function() {
+		
   //--- Start of PG only code
-  document.addEventListener("deviceready", function() {
-    Drupal.initialize();
+  $(document).bind("deviceready", function() {
+	
+		// Determine if user has saved a baseurl
+		if ($('#base_url').val()) {
+			Drupal.initialize($('#base_url').val());
+		}
+		else {
+			// Base url is not yet saved.
+			$.mobile.changePage('#options', undefined, undefined, true);
+		}	
+    
     //Since we have a device, use it to get the picture
     $('#get-picture').unbind('click.nodevice').bind('click.device', function(){
       $.mobile.changePage([$.mobile.activePage, $('#get-picture-from-device')], 'none', false);
@@ -123,7 +134,7 @@ $(document).ready(function() {
  });
  
  var getPictureDataUrl = function(img, callback) {
-   var $img = $(img); 
+   var $img = $(img);
    if(!$img.attr('src') || $img.attr('src') ===  'images/entry_no_icon.png') {
      callback('data:,');
    }
@@ -137,8 +148,29 @@ $(document).ready(function() {
        if(!e.target.error) {
          callback(e.target.result);
        }
+       else {
+   		 
+   	   }
      };
-     reader.readAsDataURL($img.attr('src'));
+
+	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+
+	 function gotFS(fileSystem) {
+	  	// fileSystem.root contains a DirectoryEntry object
+		var url = $img.attr('src');
+		
+		url = fileSystem.root.fullPath + "/tmp/" + url.substring(url.lastIndexOf('/') + 1);
+		
+		fileSystem.root.getFile( url, {"create":true, "exclusive":false}, function(fileEntry) {
+			reader.readAsDataURL(fileEntry);
+		}, function(e){  });
+	
+	 }
+	function fail(fileSystem) {
+		
+	}
+	
+	
    } else {
      //Use the Canvas API to get the Data URL
      //This doesn't seems to work on Android 2.2
@@ -162,18 +194,22 @@ $(document).ready(function() {
 
  //Drupal stuffs
  $('#login').click(function() {
+	 // Drupal.initialize($('#base_url').val());
    Drupal.user.login($('#name').val(), $('#password').val());
  });
  $('#logout').click(function() {
    Drupal.user.logout();
  });
  $(document).bind('DrupalLogin', function(e, user){
-   navigator.notification.alert('Logged in as ' + user.name, $.noop, 'Drupal');
+   // navigator.notification.alert('Logged in as ' + user.name, $.noop, 'Drupal');
+	 $("#options-button .ui-btn-text").text(user.name);
    $('#login').hide();
    $('#logout').show();
+	 $.mobile.changePage("#home", undefined, undefined, true);
  });
  $(document).bind('DrupalLogout', function(e, user){
-   navigator.notification.alert('Logged out', $.noop, 'Drupal');
+   // navigator.notification.alert('Logged out', $.noop, 'Drupal');
+   $("#options-button .ui-btn-text").text("Log In");
    $('#login').show();
    $('#logout').hide();
  });
@@ -200,35 +236,39 @@ $(document).ready(function() {
        return
      }
      //@todo: check for mime type in dataUrl to use the correct extension
+	 	 
      Drupal.file.create({
-       filename: 'phonegap.jpg',
-       filepath: 'sites/default/files/phonegap.jpg',
-       file: dataUrl.slice(dataUrl.indexOf(';base64,') + ';base64,'.length)
+       filename: $("#picture").attr('src').substring($("#picture").attr('src').lastIndexOf('/') + 1),
+       file: dataUrl.slice(dataUrl.indexOf(';base64,') + ';base64,'.length),
+			 uid: Drupal.user.current.uid
      }, function(data){
        Drupal.node.create({
+	       uid: Drupal.user.current.uid,
+	       name: Drupal.user.current.name,
          title: $('#title').val(),
-         body: $('#body').val(),
-         type: 'page',
-         field_image: [{
-           fid: data.fid
-         }],
-         field_location: [{
-           street: $('#street').val(),
-           city: $('#city').val(),
-           postal_code: $('#postal_code').val(),
-           country : "be",
-           locpick: {
-             user_latitude: $('#latitude').val(),
-             user_longitude: $('#longitude').val()
-           },
-           province_name: $('#pronvince').val()
-         }]
+         body: { en: [{
+						value: $('#body').val()
+				 }]},
+         type: 'blog',
+         field_images: {
+						en:	[{
+							fid: data.fid
+			   		}]
+		     },
+          locations: [{
+            street: $('#street').val(),
+            city: $('#city').val(),
+            postal_code: $('#postal_code').val(),
+            latitude: $('#latitude').val(),
+            longitude: $('#longitude').val(),
+            province: $('#province').val(),
+          }]
        }, function(data){         
          $('#title, #body').val('');
          $('#picture').attr('src', 'images/entry_no_icon.png');
          $.mobile.pageLoading(true);
          navigator.notification.vibrate(250);
-         navigator.notification.alert('New node created with nid ' + data.nid, $.noop, 'Drupal');
+         navigator.notification.alert('New post created with nid ' + data.nid, $.noop, 'Drupal');
        });
      }, function() {
        $.mobile.pageLoading(true);
@@ -238,6 +278,6 @@ $(document).ready(function() {
  //Async. load GMaps API
  var script = document.createElement("script");
  script.type = "text/javascript";
- script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=gmapInit&region=BE";
+ script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=gmapInit&region=US";
  document.body.appendChild(script);
 });

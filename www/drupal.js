@@ -63,10 +63,16 @@ Drupal = (function($){
     base_url: '',
     initialize: function(baseUrl, onSuccess, onError) {
       Drupal.base_url = baseUrl || Drupal.base_url;
+			if (!Drupal.base_url.match(/\/$/)) {
+				Drupal.base_url = Drupal.base_url + "/";
+			}
       Drupal.system.connect(chain(function(){
         if(Drupal.user.is_logged_in()) {
           $(document).trigger('DrupalLogin', Drupal.user.current);
         }
+				else {
+					$.mobile.changePage('#options', undefined, undefined, true);
+				}
       }, onSuccess || $.noop), onError || $.noop);      
     },
     user: {
@@ -74,7 +80,7 @@ Drupal = (function($){
       is_logged_in: function() {
         return parseInt(Drupal.user.current.uid) != 0;
       },
-      login: action('api/user/login', ['name', 'pass'], function(data) {
+      login: action('api/user/login', ['username', 'password'], function(data) {
         Drupal.user.current = data.user;
         Drupal.session = {id: data.sessid, name: data.session_name};
         $(document).trigger('DrupalLogin', Drupal.user.current);

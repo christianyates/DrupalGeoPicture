@@ -16,6 +16,10 @@
 
  You should have received a copy of the GNU Affero General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+	
+	@TODO - remove local data storage of username and password, for christs sake! Replace with a session id
+
 -->
 
   <head>
@@ -24,7 +28,7 @@
     <link rel="stylesheet" href="index.css" type="text/css">
     <script src="jquery-1.4.4.min.js"></script>
     <script src="jquery.mobile-1.0a2.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="phonegap-0.9.3.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.1.js"></script>
     <script type="text/javascript" charset="utf-8" src="drupal.js"></script>
     <script type="text/javascript" charset="utf-8" src="index.js"></script> 
   </head>
@@ -56,6 +60,8 @@
     <div data-role="header"><h1>Options</h1></div>
     <div data-role="content">
     <div data-role="fieldcontain">
+			<label for="base_url">Site URL</label>
+			<input type="text" name="base_url" value="" id="base_url" data-storage-key="base_url" />	
 	    <label for="name">Username</label>
 	    <input type="text" name="name" id="name" data-storage-key="username" value=""  />
 	    <label for="password">Password</label>
@@ -103,7 +109,7 @@
 	<div data-role="dialog" data-theme="a" id="get-picture-from-file">
 	 <div data-role="header"><h1>Picture</h1></div>
     <div data-role="content">
-      <input type="file" accept="image/gif, image/jpeg, image/png"  name="picture-file" id="picture-file"></input>
+      <!-- <input type="file" accept="image/gif, image/jpeg, image/png"  name="picture-file" id="picture-file"/> -->
 	    <a href="#" data-role="button" data-icon="check">Ok</a>
     </div>
 	</div>
