@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC51F6F013BF73EB00A044A3 /* www in Resources */ = {isa = PBXBuildFile; fileRef = EC51F6EF13BF73EA00A044A3 /* www */; };
+		ECB753FA13BF739600479F8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB753F913BF739600479F8F /* Foundation.framework */; };
+		ECB753FC13BF739600479F8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB753FB13BF739600479F8F /* UIKit.framework */; };
+		ECB753FE13BF739600479F8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB753FD13BF739600479F8F /* CoreGraphics.framework */; };
+		ECB7540013BF739600479F8F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB753FF13BF739600479F8F /* AddressBook.framework */; };
+		ECB7540213BF739600479F8F /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540113BF739600479F8F /* AddressBookUI.framework */; };
+		ECB7540413BF739600479F8F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540313BF739600479F8F /* AudioToolbox.framework */; };
+		ECB7540613BF739600479F8F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540513BF739600479F8F /* AVFoundation.framework */; };
+		ECB7540813BF739600479F8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540713BF739600479F8F /* CoreLocation.framework */; };
+		ECB7540A13BF739600479F8F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540913BF739600479F8F /* MediaPlayer.framework */; };
+		ECB7540C13BF739600479F8F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540B13BF739600479F8F /* QuartzCore.framework */; };
+		ECB7540E13BF739600479F8F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540D13BF739600479F8F /* SystemConfiguration.framework */; };
+		ECB7541013BF739600479F8F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540F13BF739600479F8F /* MobileCoreServices.framework */; };
+		ECB7541413BF739600479F8F /* DrupalGeoPicture-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECB7541313BF739600479F8F /* DrupalGeoPicture-Info.plist */; };
+		ECB7541713BF739600479F8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECB7541513BF739600479F8F /* InfoPlist.strings */; };
+		ECB7541A13BF739600479F8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB7541913BF739600479F8F /* main.m */; };
+		ECB7541C13BF739600479F8F /* PhoneGap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7541B13BF739600479F8F /* PhoneGap.framework */; };
+		ECB7542013BF739600479F8F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB7541F13BF739600479F8F /* icon.png */; };
+		ECB7542213BF739600479F8F /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB7542113BF739600479F8F /* icon@2x.png */; };
+		ECB7542413BF739600479F8F /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB7542313BF739600479F8F /* icon-72.png */; };
+		ECB7542713BF739600479F8F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB7542613BF739600479F8F /* Default.png */; };
+		ECB7542913BF739600479F8F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB7542813BF739600479F8F /* Default@2x.png */; };
+		ECB7542B13BF739600479F8F /* Default~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB7542A13BF739600479F8F /* Default~iPad.png */; };
+		ECB7542D13BF739600479F8F /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECB7542C13BF739600479F8F /* PhoneGap.plist */; };
+		ECB7543013BF739600479F8F /* AppDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = ECB7542F13BF739600479F8F /* AppDelegate.h */; };
+		ECB7543213BF739600479F8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB7543113BF739600479F8F /* AppDelegate.m */; };
+		ECB7543513BF739600479F8F /* README in Resources */ = {isa = PBXBuildFile; fileRef = ECB7543413BF739600479F8F /* README */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC51F6EF13BF73EA00A044A3 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		ECB753F513BF739600479F8F /* DrupalGeoPicture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrupalGeoPicture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB753F913BF739600479F8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ECB753FB13BF739600479F8F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ECB753FD13BF739600479F8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ECB753FF13BF739600479F8F /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		ECB7540113BF739600479F8F /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		ECB7540313BF739600479F8F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		ECB7540513BF739600479F8F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ECB7540713BF739600479F8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		ECB7540913BF739600479F8F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		ECB7540B13BF739600479F8F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ECB7540D13BF739600479F8F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		ECB7540F13BF739600479F8F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		ECB7541313BF739600479F8F /* DrupalGeoPicture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrupalGeoPicture-Info.plist"; sourceTree = "<group>"; };
+		ECB7541613BF739600479F8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ECB7541813BF739600479F8F /* DrupalGeoPicture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrupalGeoPicture-Prefix.pch"; sourceTree = "<group>"; };
+		ECB7541913BF739600479F8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ECB7541B13BF739600479F8F /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
+		ECB7541F13BF739600479F8F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icons/icon.png; sourceTree = "<group>"; };
+		ECB7542113BF739600479F8F /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Resources/icons/icon@2x.png"; sourceTree = "<group>"; };
+		ECB7542313BF739600479F8F /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Resources/icons/icon-72.png"; sourceTree = "<group>"; };
+		ECB7542613BF739600479F8F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/splash/Default.png; sourceTree = "<group>"; };
+		ECB7542813BF739600479F8F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
+		ECB7542A13BF739600479F8F /* Default~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~iPad.png"; path = "Resources/splash/Default~iPad.png"; sourceTree = "<group>"; };
+		ECB7542C13BF739600479F8F /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
+		ECB7542F13BF739600479F8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		ECB7543113BF739600479F8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		ECB7543413BF739600479F8F /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECB753EF13BF739600479F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB753FA13BF739600479F8F /* Foundation.framework in Frameworks */,
+				ECB753FC13BF739600479F8F /* UIKit.framework in Frameworks */,
+				ECB753FE13BF739600479F8F /* CoreGraphics.framework in Frameworks */,
+				ECB7540013BF739600479F8F /* AddressBook.framework in Frameworks */,
+				ECB7540213BF739600479F8F /* AddressBookUI.framework in Frameworks */,
+				ECB7540413BF739600479F8F /* AudioToolbox.framework in Frameworks */,
+				ECB7540613BF739600479F8F /* AVFoundation.framework in Frameworks */,
+				ECB7540813BF739600479F8F /* CoreLocation.framework in Frameworks */,
+				ECB7540A13BF739600479F8F /* MediaPlayer.framework in Frameworks */,
+				ECB7540C13BF739600479F8F /* QuartzCore.framework in Frameworks */,
+				ECB7540E13BF739600479F8F /* SystemConfiguration.framework in Frameworks */,
+				ECB7541013BF739600479F8F /* MobileCoreServices.framework in Frameworks */,
+				ECB7541C13BF739600479F8F /* PhoneGap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB753F213BF739600479F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECB753E713BF739600479F8F = {
+			isa = PBXGroup;
+			children = (
+				EC51F6EF13BF73EA00A044A3 /* www */,
+				ECB7541113BF739600479F8F /* DrupalGeoPicture */,
+				ECB753F813BF739600479F8F /* Frameworks */,
+				ECB753F613BF739600479F8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECB753F613BF739600479F8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECB753F513BF739600479F8F /* DrupalGeoPicture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECB753F813BF739600479F8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECB753F913BF739600479F8F /* Foundation.framework */,
+				ECB753FB13BF739600479F8F /* UIKit.framework */,
+				ECB753FD13BF739600479F8F /* CoreGraphics.framework */,
+				ECB753FF13BF739600479F8F /* AddressBook.framework */,
+				ECB7540113BF739600479F8F /* AddressBookUI.framework */,
+				ECB7540313BF739600479F8F /* AudioToolbox.framework */,
+				ECB7540513BF739600479F8F /* AVFoundation.framework */,
+				ECB7540713BF739600479F8F /* CoreLocation.framework */,
+				ECB7540913BF739600479F8F /* MediaPlayer.framework */,
+				ECB7540B13BF739600479F8F /* QuartzCore.framework */,
+				ECB7540D13BF739600479F8F /* SystemConfiguration.framework */,
+				ECB7540F13BF739600479F8F /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECB7541113BF739600479F8F /* DrupalGeoPicture */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7541B13BF739600479F8F /* PhoneGap.framework */,
+				ECB7541D13BF739600479F8F /* Resources */,
+				ECB7542E13BF739600479F8F /* Classes */,
+				ECB7543313BF739600479F8F /* Plugins */,
+				ECB7541213BF739600479F8F /* Supporting Files */,
+			);
+			path = DrupalGeoPicture;
+			sourceTree = "<group>";
+		};
+		ECB7541213BF739600479F8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7541313BF739600479F8F /* DrupalGeoPicture-Info.plist */,
+				ECB7541513BF739600479F8F /* InfoPlist.strings */,
+				ECB7541813BF739600479F8F /* DrupalGeoPicture-Prefix.pch */,
+				ECB7541913BF739600479F8F /* main.m */,
+				ECB7542C13BF739600479F8F /* PhoneGap.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECB7541D13BF739600479F8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7541E13BF739600479F8F /* icons */,
+				ECB7542513BF739600479F8F /* splash */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		ECB7541E13BF739600479F8F /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7541F13BF739600479F8F /* icon.png */,
+				ECB7542113BF739600479F8F /* icon@2x.png */,
+				ECB7542313BF739600479F8F /* icon-72.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		ECB7542513BF739600479F8F /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7542613BF739600479F8F /* Default.png */,
+				ECB7542813BF739600479F8F /* Default@2x.png */,
+				ECB7542A13BF739600479F8F /* Default~iPad.png */,
+			);
+			name = splash;
+			sourceTree = "<group>";
+		};
+		ECB7542E13BF739600479F8F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7542F13BF739600479F8F /* AppDelegate.h */,
+				ECB7543113BF739600479F8F /* AppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		ECB7543313BF739600479F8F /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7543413BF739600479F8F /* README */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECB753F413BF739600479F8F /* DrupalGeoPicture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECB7543813BF739600479F8F /* Build configuration list for PBXNativeTarget "DrupalGeoPicture" */;
+			buildPhases = (
+				ECB753EE13BF739600479F8F /* Sources */,
+				ECB753EF13BF739600479F8F /* Frameworks */,
+				ECB753F013BF739600479F8F /* Resources */,
+				ECB753F113BF739600479F8F /* Sources */,
+				ECB753F213BF739600479F8F /* Frameworks */,
+				ECB753F313BF739600479F8F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrupalGeoPicture;
+			productName = DrupalGeoPicture;
+			productReference = ECB753F513BF739600479F8F /* DrupalGeoPicture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECB753E913BF739600479F8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Christian Yates Interactive";
+			};
+			buildConfigurationList = ECB753EC13BF739600479F8F /* Build configuration list for PBXProject "DrupalGeoPicture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ECB753E713BF739600479F8F;
+			productRefGroup = ECB753F613BF739600479F8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECB753F413BF739600479F8F /* DrupalGeoPicture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECB753F013BF739600479F8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB7541413BF739600479F8F /* DrupalGeoPicture-Info.plist in Resources */,
+				ECB7541713BF739600479F8F /* InfoPlist.strings in Resources */,
+				ECB7542013BF739600479F8F /* icon.png in Resources */,
+				ECB7542213BF739600479F8F /* icon@2x.png in Resources */,
+				ECB7542413BF739600479F8F /* icon-72.png in Resources */,
+				ECB7542713BF739600479F8F /* Default.png in Resources */,
+				ECB7542913BF739600479F8F /* Default@2x.png in Resources */,
+				ECB7542B13BF739600479F8F /* Default~iPad.png in Resources */,
+				ECB7542D13BF739600479F8F /* PhoneGap.plist in Resources */,
+				ECB7543013BF739600479F8F /* AppDelegate.h in Resources */,
+				ECB7543513BF739600479F8F /* README in Resources */,
+				EC51F6F013BF73EB00A044A3 /* www in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ECB753F313BF739600479F8F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\n\t\t\t\t\t\t\t\tif [ ! -d \"$PROJECT_DIR/www\" ] ; then\n\t\t\t\t\t\t\t\t\tcp -R /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/www \"$PROJECT_DIR\"\n\t\t\t\t\t\t\t\tfi\n\t\t\t\t\t\t\t\t# detect www folder reference in project, if missing, print warning\n\t\t\t\t\t\t\t\tgrep \"{isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = \\\"<group>\\\"; };\" \"$PROJECT_DIR/$PROJECT_NAME.xcodeproj/project.pbxproj\"\n\t\t\t\t\t\t\t\trc=$? \n\t\t\t\t\t\t\t\tif [ $rc != 0 ] ; then\n\t\t\t\t\t\t\t\techo -e \"warning: Missing - Add $PROJECT_DIR/www as a folder reference in your project. Just drag and drop the folder into your project, in Xcode 4.\" 1>&2\n\t\t\t\t\t\t\t\tfi\t\t\t\t\t\t\t";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECB753EE13BF739600479F8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB7541A13BF739600479F8F /* main.m in Sources */,
+				ECB7543213BF739600479F8F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB753F113BF739600479F8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ECB7541513BF739600479F8F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECB7541613BF739600479F8F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECB7543613BF739600479F8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ECB7543713BF739600479F8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		ECB7543913BF739600479F8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = /Users/Shared/PhoneGap/Frameworks;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrupalGeoPicture/DrupalGeoPicture-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				INFOPLIST_FILE = "DrupalGeoPicture/DrupalGeoPicture-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ECB7543A13BF739600479F8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = /Users/Shared/PhoneGap/Frameworks;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrupalGeoPicture/DrupalGeoPicture-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				INFOPLIST_FILE = "DrupalGeoPicture/DrupalGeoPicture-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECB753EC13BF739600479F8F /* Build configuration list for PBXProject "DrupalGeoPicture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB7543613BF739600479F8F /* Debug */,
+				ECB7543713BF739600479F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECB7543813BF739600479F8F /* Build configuration list for PBXNativeTarget "DrupalGeoPicture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB7543913BF739600479F8F /* Debug */,
+				ECB7543A13BF739600479F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECB753E913BF739600479F8F /* Project object */;
+}
