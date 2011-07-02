@@ -24,7 +24,7 @@ Drupal = (function($){
       dataType: 'json',
       contentType: 'application/json',
       success: onSuccess,
-      error: onError,
+      error: onError
     });
   };
   
@@ -58,7 +58,7 @@ Drupal = (function($){
       });
     }
   }
-  
+
   return {
     base_url: '',
     initialize: function(baseUrl, onSuccess, onError) {
@@ -80,14 +80,14 @@ Drupal = (function($){
       is_logged_in: function() {
         return parseInt(Drupal.user.current.uid) != 0;
       },
-      login: action('api/user/login', ['username', 'password'], function(data) {
+      login: action('drupalgeopicture/user/login', ['username', 'password'], function(data) {
         Drupal.user.current = data.user;
         Drupal.session = {id: data.sessid, name: data.session_name};
         $(document).trigger('DrupalLogin', Drupal.user.current);
       }, function(xhr, textStatus, error) {
         alert(textStatus);
       }),
-      logout: action('api/user/logout', [], function(data) {
+      logout: action('drupalgeopicture/user/logout', [], function(data) {
         delete Drupal.user.current;
         Drupal.system.connect(function(){
           $(document).trigger('DrupalLogout');
@@ -97,19 +97,23 @@ Drupal = (function($){
       }),
     },
     system: {
-      connect: action('api/system/connect', [], function(data){
+      connect: action('drupalgeopicture/system/connect', [], function(data){
         Drupal.user.current = data.user;
         Drupal.session = {id: data.sessid};
       }),
     },
     file: {
       create: function(file, callback) {
-        POST('api/file', {file: file}, callback);
+        POST('drupalgeopicture/file', {file: file}, callback, function(jqXHR, textStatus, errorThrown) {
+					if (jqXHR.status == 401) { navigator.notification.alert('You do not have access to post files. Check with your friendly site administrator.', $.mobile.pageLoading(true), 'Permission Denied') };
+			  });
       }
     },
     node: {
       create: function(node, callback) {
-        POST('api/node', {node: node}, callback);
+        POST('drupalgeopicture/node', {node: node}, callback, function(jqXHR, textStatus, errorThrown) {
+					if (jqXHR.status == 401) { navigator.notification.alert('You do not have access to post blogs. Check with your friendly site administrator.', $.mobile.pageLoading(true), 'Permission Denied') };
+			  });
       }
     }
   };
