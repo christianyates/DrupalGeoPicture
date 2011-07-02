@@ -1,6 +1,6 @@
 /*
- * Drupal GeoPicture. A simple Drupal picture uploader for Android.
- * Copyright (C) 2011 Pierre Buyle
+ * Drupal GeoPicture. A simple Drupal picture uploader for iOS.
+ * Copyright (C) 2011 Pierre Buyle, Christian Yates
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
