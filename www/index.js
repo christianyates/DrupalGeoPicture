@@ -246,12 +246,13 @@ $(document).ready(function() {
 	       uid: Drupal.user.current.uid,
 	       name: Drupal.user.current.name,
          title: $('#title').val(),
-         body: { en: [{
+         body: { und: [{
 						value: $('#body').val()
 				 }]},
          type: 'blog',
+         language: 'und',
          field_images: {
-						en:	[{
+						und:	[{
 							fid: data.fid
 			   		}]
 		     },

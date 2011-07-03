@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drupal GeoPicture Service feature.
+ */
+
+include_once('drupal_geopicture_service.features.inc');
