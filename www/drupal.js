@@ -24,7 +24,12 @@ Drupal = (function($){
       dataType: 'json',
       contentType: 'application/json',
       success: onSuccess,
-      error: onError
+      error: onError,
+			statusCode: {
+				401: function() {
+					navigator.notification.alert("You don't seem to have access to do that.", $.mobile.pageLoading(true), 'Permission Denied');
+				}
+			}
     });
   };
   
@@ -104,16 +109,12 @@ Drupal = (function($){
     },
     file: {
       create: function(file, callback) {
-        POST('drupalgeopicture/file', {file: file}, callback, function(jqXHR, textStatus, errorThrown) {
-					if (jqXHR.status == 401) { navigator.notification.alert('You do not have access to post files. Check with your friendly site administrator.', $.mobile.pageLoading(true), 'Permission Denied') };
-			  });
+        POST('drupalgeopicture/file', {file: file}, callback);
       }
     },
     node: {
       create: function(node, callback) {
-        POST('drupalgeopicture/node', {node: node}, callback, function(jqXHR, textStatus, errorThrown) {
-					if (jqXHR.status == 401) { navigator.notification.alert('You do not have access to post blogs. Check with your friendly site administrator.', $.mobile.pageLoading(true), 'Permission Denied') };
-			  });
+        POST('drupalgeopicture/node', {node: node}, callback);
       }
     }
   };
