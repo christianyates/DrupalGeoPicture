@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="index.css" type="text/css">
     <script src="jquery-1.5.2.min.js"></script>
     <script src="jquery.mobile-1.0a2.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap.1.0.0.js"></script>
     <script type="text/javascript" charset="utf-8" src="drupal.js"></script>
     <script type="text/javascript" charset="utf-8" src="index.js"></script> 
   </head>
@@ -102,14 +102,14 @@
 	  <div data-role="content">
 	    <div data-role="controlgroup">
         <a data-picture-source="CAMERA" data-role="button" href="#">Take picture</a>
-        <a data-picture-source="PHOTOLIBRARY" data-role="button" href="#">Use picture from album</a>
+        <a data-picture-source="PHOTOLIBRARY" data-role="button" href="#">Use picture from library</a>
       </div>
     </div>
 	</div>
 	<div data-role="dialog" data-theme="a" id="get-picture-from-file">
 	 <div data-role="header"><h1>Picture</h1></div>
     <div data-role="content">
-      <!-- <input type="file" accept="image/gif, image/jpeg, image/png"  name="picture-file" id="picture-file"/> -->
+      <input type="file" accept="image/gif, image/jpeg, image/png"  name="picture-file" id="picture-file"/>
 	    <a href="#" data-role="button" data-icon="check">Ok</a>
     </div>
 	</div>

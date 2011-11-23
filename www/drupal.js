@@ -78,7 +78,7 @@ Drupal = (function($){
 				else {
 					$.mobile.changePage('#options', undefined, undefined, true);
 				}
-      }, onSuccess || $.noop), onError || $.noop);      
+      }, onSuccess || $.noop), onError || $.noop);    
     },
     user: {
       current: {uid:0},

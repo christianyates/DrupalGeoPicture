@@ -194,7 +194,7 @@ $(document).ready(function() {
 
  //Drupal stuffs
  $('#login').click(function() {
-	 // Drupal.initialize($('#base_url').val());
+	 Drupal.initialize($('#base_url').val());
    Drupal.user.login($('#name').val(), $('#password').val());
  });
  $('#logout').click(function() {
