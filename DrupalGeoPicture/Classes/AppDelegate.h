@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  DrupalGeoPicture
+//  DrupalGeoPicture2
 //
-//  Created by Christian Yates on 7/2/11.
-//  Copyright Christian Yates Interactive 2011. All rights reserved.
+//  Created by Christian Yates on 11/22/11.
+//  Copyright Acquia 2011. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -19,7 +19,7 @@
 }
 
 // invoke string is passed to your app on launch, this is only valid if you 
-// edit DrupalGeoPicture.plist to add a protocol
+// edit DrupalGeoPicture2.plist to add a protocol
 // a simple tutorial can be found here : 
 // http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
 

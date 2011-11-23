@@ -20,7 +20,6 @@
 		ECB7540C13BF739600479F8F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540B13BF739600479F8F /* QuartzCore.framework */; };
 		ECB7540E13BF739600479F8F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540D13BF739600479F8F /* SystemConfiguration.framework */; };
 		ECB7541013BF739600479F8F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7540F13BF739600479F8F /* MobileCoreServices.framework */; };
-		ECB7541413BF739600479F8F /* DrupalGeoPicture-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECB7541313BF739600479F8F /* DrupalGeoPicture-Info.plist */; };
 		ECB7541713BF739600479F8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECB7541513BF739600479F8F /* InfoPlist.strings */; };
 		ECB7541A13BF739600479F8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB7541913BF739600479F8F /* main.m */; };
 		ECB7541C13BF739600479F8F /* PhoneGap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7541B13BF739600479F8F /* PhoneGap.framework */; };
@@ -235,6 +234,7 @@
 		ECB753E913BF739600479F8F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Christian Yates Interactive";
 			};
 			buildConfigurationList = ECB753EC13BF739600479F8F /* Build configuration list for PBXProject "DrupalGeoPicture" */;
@@ -259,7 +259,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB7541413BF739600479F8F /* DrupalGeoPicture-Info.plist in Resources */,
 				ECB7541713BF739600479F8F /* InfoPlist.strings in Resources */,
 				ECB7542013BF739600479F8F /* icon.png in Resources */,
 				ECB7542213BF739600479F8F /* icon@2x.png in Resources */,
@@ -364,6 +363,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrupalGeoPicture/DrupalGeoPicture-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "DrupalGeoPicture/DrupalGeoPicture-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -380,6 +380,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrupalGeoPicture/DrupalGeoPicture-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "DrupalGeoPicture/DrupalGeoPicture-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;

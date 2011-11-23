@@ -1,9 +1,9 @@
 //
 //  main.m
-//  DrupalGeoPicture
+//  DrupalGeoPicture2
 //
-//  Created by Christian Yates on 7/2/11.
-//  Copyright Christian Yates Interactive 2011. All rights reserved.
+//  Created by Christian Yates on 11/22/11.
+//  Copyright Acquia 2011. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
