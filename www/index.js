@@ -36,12 +36,28 @@ $(document).ready(function() {
     $('#get-picture').unbind('click.nodevice').bind('click.device', function(){
       $.mobile.changePage([$.mobile.activePage, $('#get-picture-from-device')], 'none', false);
     });
-    $('#get-picture-from-device a[data-picture-source]').removeClass('ui-disabled').click(function(){
-      navigator.camera.getPicture(function(imageUri) {
-        $('#picture').attr('src', imageUri);
+    $('#get-picture-from-device a[data-picture-source=CAMERA]').removeClass('ui-disabled').click(function(){
+			try {
+	      navigator.camera.getPicture(function(imageData) {
+	        $('#picture').attr('src', "data:image/jpeg;base64," + imageData);
+					localStorage.setItem("image", imageData);
+	      }, $.noop, {
+	        quality: 50,
+	        destinationType: Camera.DestinationType.DATA_URL,
+	        sourceType: Camera.PictureSourceType[$(this).data('picture-source')]
+	      });
+			}
+			catch(err) {
+				alert("Sorry, no camera detected");
+			}
+    });
+    $('#get-picture-from-device a[data-picture-source=PHOTOLIBRARY]').removeClass('ui-disabled').click(function(){
+      navigator.camera.getPicture(function(imageData) {
+        $('#picture').attr('src', "data:image/jpeg;base64," + imageData);
+				localStorage.setItem("image", imageData);
       }, $.noop, {
         quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI,
+        destinationType: Camera.DestinationType.DATA_URL,
         sourceType: Camera.PictureSourceType[$(this).data('picture-source')]
       });
     });
@@ -213,6 +229,7 @@ $(document).ready(function() {
    $('#login').show();
    $('#logout').hide();
  });
+
  $('#post').click(function() {
    if(!Drupal.user.is_logged_in()) {
      navigator.notification.vibrate(500);
